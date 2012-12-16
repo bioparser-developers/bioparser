@@ -1,0 +1,2 @@
+vim main.d ../src/misc/ascii.d ../src/misc/stats.d ../src/parser/fasta.d ../src/parser/fastq.d
+ldc2 -I=../src/ main.d ../src/misc/ascii.d ../src/misc/stats.d ../src/parser/fasta.d ../src/parser/fastq.d -of test -unittest

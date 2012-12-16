@@ -1,0 +1,23 @@
+============
+BioParser
+============
+
+This project provides some method to read various biology file format. These parsers used memory mapped file to read
+efficiently file and they are designed to save memory. The file is not load in memory to do this.
+
+BUILD
+-----
+Build system use make file then you are able to custom the build. Some example:
+- Basic:                                        make -j4
+- Select compiler:                              make -j4 DC=ldc
+- Select flag to send to compiler:              make -j4 DC=ldc DFLAGS="-w -g -O3"
+- Get a geany tag file to have autompletion:    make geany-tag
+- Get pkgconfig file:                           make pkgfile
+- Build as shared lib:                          make shared-lib
+- Combine targets together:                     make -j4 shared-lib geany-tag  DC=ldc DFLAGS="-w -g -O3"
+
+INSTALL
+-------
+- Basic:                                        make -j4 install
+- Secific prefix                                make -j4 install PREFIX=/usr/local
+- Specific destdir                              make -j4 DESTDIR=./myDir
